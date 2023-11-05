@@ -1,50 +1,43 @@
 .container-main {
-    background-image: url("../images/oaknorth1.jpg");
-    background-size: cover;
-    width: 85%;
-    height: 80vh;
-    display: block;
-    margin: 0 auto;
-    margin-top: 30px;
-    border-radius: 50px;
+  background-image: url("../images/oaknorth1.jpg");
+  background-size: cover;
+  width: 85%;
+  height: 80vh;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  border-radius: 50px;
 }
 body {
-    background: linear-gradient(to bottom, #ebf1f6 0%, #abd3ee 50%, #d5ebfb 100%);
-    background-size: 100% 100%;
-    
+  background: linear-gradient(to bottom, #ebf1f6 0%, #abd3ee 50%, #d5ebfb 100%);
+  background-size: 100% 100%;
 }
-footer{
-    text-align: center;
-    background: linear-gradient(to bottom, #ebf1f6 0%, #abd3ee 50%, #d5ebfb 100%);
-    padding: 50px;
-    font-family: 'Courier New', Courier, monospace;
-
+footer {
+  text-align: center;
+  background: linear-gradient(to bottom, #ebf1f6 0%, #abd3ee 50%, #d5ebfb 100%);
+  padding: 50px;
+  font-family: "Courier New", Courier, monospace;
 }
-.row-search{
-   margin-left: 200px;
-
+.row-search {
+  margin-left: 200px;
 }
 .container-weather {
- font-size: 30px;
- text-align: center;
- font-family: Verdana, Geneva, Tahoma, sans-serif;
- font-weight: 700;
- color: #301076;
+  font-size: 30px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  color: #301076;
 }
 .container-forecast {
-  margin-top: 220px;
+  margin-top: 170px;
+}
+.card {
+  text-align: center;
+  justify-content: space-between;
+  line-height: 1;
+  padding-top: 10px;
+  font-size: larger;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #301076;
+}
 
-  
-   
-}
-.card{
-    text-align: center;
-    justify-content: space-between;
-    line-height: 1;
-    padding-top: 10px;
-    font-size: larger;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color: #301076;
- 
-    
-}

@@ -29,10 +29,10 @@ function updateData(response) {
   wind.innerHTML = `${Math.round(response.data.wind.speed)} m/h`;
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = `${response.data.temperature.humidity} %`;
-  let icon = document.querySelector("#icon");
-  icon.innerHTML = response.data.condition.icon_url;
   let time = document.querySelector("#current-day");
   let date = new Date(response.data.time * 1000);
+  let iconElement = document.querySelector("#icon");
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}">`
 
   time.innerHTML = formatDate(date);
 }
@@ -49,7 +49,7 @@ function formatDate(date) {
     "Saturday",
   ];
   let day = daysOfWeek[date.getDay()];
-  if (minutes > 10) {
+  if (minutes < 10) {
     minutes = `0${minutes}`;
   }
   return `${day} ${hours}:${minutes}`;
