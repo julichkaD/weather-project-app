@@ -23,7 +23,26 @@ footer{
 
 }
 .container-weather {
-  font-size: 30px;
+ font-size: 30px;
  text-align: center;
  font-family: Verdana, Geneva, Tahoma, sans-serif;
+ font-weight: 900;
+ color: #301076;
+}
+.container-forecast {
+  margin-top: 280px;
+
+  
+   
+}
+.card{
+    text-align: center;
+    justify-content: space-between;
+    line-height: 1;
+    padding-top: 10px;
+    font-size: larger;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #301076;
+ 
+    
 }
