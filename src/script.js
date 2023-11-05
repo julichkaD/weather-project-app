@@ -20,7 +20,37 @@ function showData(city) {
 
 function updateData(response) {
   let temp = document.querySelector("#current-temp");
-  temp.innerHTML = Math.round(response.data.temperature.current) + "℃";
+  temp.innerHTML = `${Math.round(response.data.temperature.current)}℃`;
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.city;
+  let description = document.querySelector("#description");
+  description.innerHTML = response.data.condition.description;
+  let wind = document.querySelector("#wind-speed");
+  wind.innerHTML = `${Math.round(response.data.wind.speed)} m/h`;
+  let humidity = document.querySelector("#humidity");
+  humidity.innerHTML = `${response.data.temperature.humidity} %`;
+  let icon = document.querySelector("#icon");
+  icon.innerHTML = response.data.condition.icon_url;
+  let time = document.querySelector("#current-day");
+  let date = new Date(response.data.time * 1000);
+
+  time.innerHTML = formatDate(date);
+}
+function formatDate(date) {
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+  let daysOfWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = daysOfWeek[date.getDay()];
+  if (minutes > 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${day} ${hours}:${minutes}`;
 }
