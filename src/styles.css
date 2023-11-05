@@ -17,6 +17,8 @@ footer{
     text-align: center;
     background: linear-gradient(to bottom, #ebf1f6 0%, #abd3ee 50%, #d5ebfb 100%);
     padding: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    fo
 }
 .row-search{
    margin-left: 200px;
@@ -30,7 +32,7 @@ footer{
  color: #301076;
 }
 .container-forecast {
-  margin-top: 280px;
+  margin-top: 220px;
 
   
    
