@@ -18,11 +18,11 @@
     <div class="container">
         <div class="container-main">
             <div class="row-search py-3">
-                <div class="col-9 search-form">
-                    <form class="d-flex">
+                <div class="col-9">
+                    <form class="d-flex" id="search-form">
                         <input class="form-control" id="input-form" type="text" placeholder="Enter Your City"
                             autofocus="on" autocomplete="no" />
-                        <button type="button" value="submit" class="btn btn-primary btn-small ms-2">
+                        <button type="submit" value="submit" class="btn btn-primary btn-small ms-2">
                             Search
                         </button>
                     </form>
@@ -30,14 +30,14 @@
             </div>
             <div class="container-weather my-3">
                 <div class="row">
-                    <div class="col-6" id="city">New York</div>
-                    <div class="col-6" id="current-date">November, 10</div>
+                    <div class="col-6 text-warning" id="city">New York</div>
+                    <div class="col-6 text-warning" id="current-date">November, 10</div>
                 </div>
                 <div class="row">
                     <div class="col-6" id="current-temp">20 ℃</div>
                     <div class="col-6" id="current-day">Friday</div>
-                    <div class="col-6" id="condition">sunny</div>
-                      <div class="col-6" id="wind">Windy</div>
+                    <div class="col-6" id="description">sunny</div>
+                    <div class="col-6" id="wind-speed">Windy</div>
                 </div>
                 <div class="row">
                     <div class="col-6" id="icon">☀️</div>
@@ -46,12 +46,12 @@
             </div>
             <div class="container-forecast">
                 <div class="row jusify-space-between">
-                <div class="card rounded-pill col-2 mx-auto">
-                    <p class="card-text">Saturday</p>
-                    <p>18 C</p>
-                    <p>Rainy</p>
-                    <p>🌧️</p>
-                  </div>
+                    <div class="card rounded-pill col-2 mx-auto">
+                        <p class="card-text">Saturday</p>
+                        <p>18 C</p>
+                        <p>Rainy</p>
+                        <p>🌧️</p>
+                    </div>
                     <div class="card rounded-pill col-2 mx-auto">
                         <p class="card-text">Sunday</p>
                         <p>18 C</p>
@@ -77,11 +77,12 @@
     </div>
 
     <footer>This project was coded by
-    <a href="https://github.com/julichkaD" target="_blank">Julichka</a>,
-    is
-    <a href="https://github.com/julichkaD/weather-project-app" target="_blank">open-sourced on GitHub</a>
-    and
-    <a href="#" target="_blank">hosted on Netlify</a></footer>
+        <a href="https://github.com/julichkaD" target="_blank">Julichka</a>,
+        is
+        <a href="https://github.com/julichkaD/weather-project-app" target="_blank">open-sourced on GitHub</a>
+        and
+        <a href="#" target="_blank">hosted on Netlify</a>
+    </footer>
     <script src="script.js"></script>
 </body>
 

@@ -18,7 +18,7 @@ footer{
     background: linear-gradient(to bottom, #ebf1f6 0%, #abd3ee 50%, #d5ebfb 100%);
     padding: 50px;
     font-family: 'Courier New', Courier, monospace;
-    fo
+
 }
 .row-search{
    margin-left: 200px;
@@ -28,7 +28,7 @@ footer{
  font-size: 30px;
  text-align: center;
  font-family: Verdana, Geneva, Tahoma, sans-serif;
- font-weight: 900;
+ font-weight: 700;
  color: #301076;
 }
 .container-forecast {
