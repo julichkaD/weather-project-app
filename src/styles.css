@@ -18,3 +18,12 @@ footer{
     background: linear-gradient(to bottom, #ebf1f6 0%, #abd3ee 50%, #d5ebfb 100%);
     padding: 50px;
 }
+.row-search{
+   margin-left: 200px;
+
+}
+.container-weather {
+  font-size: 30px;
+ text-align: center;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

@@ -21,16 +21,32 @@
 <body>
     <div class="container">
         <div class="container-main">
-            <div class="row">
-                <form class="w-60 mt-5">
-                    <input class="form-control me-2" type="search" placeholder="Find Your City" aria-label="Search">
-                    <button class="btn btn-primary" type="submit">Search</button>
+            <div class="row-search py-3">
+                <div class="col-9 search-form">
+                <form class="d-flex">
+                    <input class="form-control" id="input-form" type="text" placeholder="Enter Your City" autofocus="on"
+                        autocomplete="no" />
+                    <button type="button" value="submit" class="btn btn-outline-primary btn-small ms-2">
+                        Search
+                    </button>
                 </form>
             </div>
+        </div>
+            <div class="container-weather">
              <div class="row">
                 <div class="col-6" id="city">New York</div>
-                <div class="col-6" id="current-temp">20 C</div>
+                <div class="col-6" id="current-date">November, 10</div>
             </div>
+            <div class="row">
+                <div class="col-6" id="current-temp">20 C</div>
+                <div class="col-6" id="current-day">Friday</div>
+            </div>
+            <div class="row">
+                <div class="col-6" id="icon">☀️</div>
+                <div class="col-6" id="condition">Sunny</div>
+                </div>
+               </div>
+
             <div class="row">
                 <div class="col-2">d</div>
                 <div class="col-2">d</div>
