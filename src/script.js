@@ -26,7 +26,7 @@ function updateData(response) {
   let description = document.querySelector("#description");
   description.innerHTML = response.data.condition.description;
   let wind = document.querySelector("#wind-speed");
-  wind.innerHTML = `${Math.round(response.data.wind.speed)} m/h`;
+  wind.innerHTML = `${Math.round(response.data.wind.speed)} km/h`;
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = `${response.data.temperature.humidity} %`;
   let time = document.querySelector("#current-day");
