@@ -19,7 +19,7 @@ function showData(city) {
 }
 
 function updateData(response) {
-  console.log(response)
+  console.log(response);
   let temp = document.querySelector("#current-temp");
   temp.innerHTML = `${Math.round(response.data.temperature.current)}˚`;
   let cityElement = document.querySelector("#city");
@@ -34,7 +34,7 @@ function updateData(response) {
   let date = new Date(response.data.time * 1000);
   let iconElement = document.querySelector("#icon");
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}">`;
-  console.log(iconElement)
+  console.log(iconElement);
 
   time.innerHTML = formatDate(date);
 }
@@ -56,3 +56,30 @@ function formatDate(date) {
   }
   return `${day} ${hours}:${minutes}`;
 }
+
+// 4 days forecast
+function displayForecast() {
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+
+    `<div class=" col-2 card rounded-pill mx-auto">
+        <div class="weather-forecast-date">${day}</div>
+        <div class="weather-forecast-icon">🌤️</div>
+        <div class="weather-forecast-temperatures">
+          <div class="weather-forecast-temperature">
+            <strong>15º</strong>
+          </div>
+          <div class="weather-forecast-temperature">9º</div>
+        </div>
+      </div>`;
+  });
+  let forecast = document.querySelector("#forecast");
+  forecast.innerHTML = forecastHtml;
+}
+displayForecast();
+
+
