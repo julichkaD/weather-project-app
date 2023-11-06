@@ -36,8 +36,11 @@ footer {
   justify-content: space-between;
   line-height: 1;
   padding-top: 10px;
-  font-size: larger;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #301076;
+  color: #4111aa;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 100;
+  font-size: 20px;
 }
-
+#forecast-min-temp {
+  opacity: 0.5;
+}
