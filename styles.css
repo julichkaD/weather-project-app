@@ -18,6 +18,7 @@ footer {
   padding: 50px;
   font-family: "Courier New", Courier, monospace;
 }
+
 .row-search {
   margin-left: 200px;
 }
@@ -31,16 +32,15 @@ footer {
 .container-forecast {
   margin-top: 170px;
 }
-.card {
-  text-align: center;
+
+#forecast {
+  display: flex;
   justify-content: space-between;
-  line-height: 1;
+  margin-top: 150px; 
   padding-top: 10px;
   color: #4111aa;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 100;
   font-size: 20px;
-}
-#forecast-min-temp {
-  opacity: 0.5;
+  text-align: center;
 }
