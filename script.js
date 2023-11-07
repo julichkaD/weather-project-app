@@ -37,6 +37,7 @@ function updateData(response) {
   console.log(iconElement);
 
   time.innerHTML = formatDate(date);
+  getForecast(response.data.city);
 }
 function formatDate(date) {
   let minutes = date.getMinutes();
@@ -57,29 +58,37 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
-// 4 days forecast
-function displayForecast() {
+// 5 days forecast
+function displayForecast(response) {
   let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"];
   let forecastHtml = "";
 
-  days.forEach(function (day) {
+  response.data.daily.forEach(function (day) {
     forecastHtml =
       forecastHtml +
-
-    `<div class=" col-2 card rounded-pill mx-auto">
-        <div class="weather-forecast-date">${day}</div>
+      `<div class=" col-2 card rounded-pill mx-auto">
+        <div class="weather-forecast-date">Tues</div>
         <div class="weather-forecast-icon">🌤️</div>
         <div class="weather-forecast-temperatures">
           <div class="weather-forecast-temperature">
-            <strong>15º</strong>
+            <strong>${Math.round(day.temperature.maximum)}º</strong>
           </div>
-          <div class="weather-forecast-temperature">9º</div>
+          <div class="weather-forecast-temperature">${Math.round(
+            day.temperature.minimum)}º</div>
         </div>
       </div>`;
   });
   let forecast = document.querySelector("#forecast");
   forecast.innerHTML = forecastHtml;
 }
-displayForecast();
 
+//forecast display
+
+function getForecast(city) {
+  let apiKey = "b58a2f047af526to478d86be21c3e75d";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+
+  axios(apiUrl).then(displayForecast);
+}
+showData("Paris");
 
