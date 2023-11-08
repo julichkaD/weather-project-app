@@ -21,7 +21,7 @@ function showData(city) {
 function updateData(response) {
   console.log(response);
   let temp = document.querySelector("#current-temp");
-  temp.innerHTML = `${Math.round(response.data.temperature.current)}˚`;
+  temp.innerHTML = `${Math.round(response.data.temperature.current)}°C`;
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.city;
   let description = document.querySelector("#description");
@@ -32,6 +32,8 @@ function updateData(response) {
   humidity.innerHTML = `Humidity: ${response.data.temperature.humidity} %`;
   let time = document.querySelector("#current-day");
   let date = new Date(response.data.time * 1000);
+  let day = document.querySelector("#current-date");
+  day.innerHTML = formattedMonth(date);
   let iconElement = document.querySelector("#icon");
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}">`;
   console.log(iconElement);
@@ -58,31 +60,67 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function formattedMonth(date) {
+  let day = date.getDate();
+ const months = [
+   "January",
+   "February",
+   "March",
+   "April",
+   "May",
+   "June",
+   "July",
+   "August",
+   "September",
+   "October",
+   "November",
+   "December",
+ ];
+ let month = months[date.getMonth()];
+ return `${month}, ${day}`
+}
+
 // 5 days forecast
 function displayForecast(response) {
   let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"];
   let forecastHtml = "";
 
-  response.data.daily.forEach(function (day) {
+  response.data.daily.forEach(function (day, index) {
+    if(index<5) {
     forecastHtml =
       forecastHtml +
       `<div class=" col-2 card rounded-pill mx-auto">
-        <div class="weather-forecast-date">Tues</div>
-        <div class="weather-forecast-icon">🌤️</div>
+        <div class="weather-forecast-date">${formattedForecast(day.time)}</div>
+       <div><img src = "${day.condition.icon_url}" class="weather-forecast-icon" /></div> 
         <div class="weather-forecast-temperatures">
           <div class="weather-forecast-temperature">
             <strong>${Math.round(day.temperature.maximum)}º</strong>
           </div>
           <div class="weather-forecast-temperature">${Math.round(
-            day.temperature.minimum)}º</div>
+            day.temperature.minimum
+          )}º</div>
         </div>
-      </div>`;
+      </div>`;}
   });
   let forecast = document.querySelector("#forecast");
   forecast.innerHTML = forecastHtml;
 }
 
 //forecast display
+
+function formattedForecast(time) {
+  let date = new Date(time * 1000);
+   let daysOfWeek = [
+     "Sun",
+     "Mon",
+     "Tue",
+     "Wed",
+     "Thu",
+     "Fri",
+     "Sat",
+   ];
+   return daysOfWeek[date.getDay()];
+}
 
 function getForecast(city) {
   let apiKey = "b58a2f047af526to478d86be21c3e75d";
@@ -91,4 +129,3 @@ function getForecast(city) {
   axios(apiUrl).then(displayForecast);
 }
 showData("Paris");
-
