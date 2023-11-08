@@ -85,8 +85,8 @@ function displayForecast(response) {
   let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"];
   let forecastHtml = "";
 
-  response.data.daily.forEach(function (day, index) {
-    if(index<5) {
+  response.data.daily.forEach(function(day, index) {
+    if(index <5 ) {
     forecastHtml =
       forecastHtml +
       `<div class=" col-2 card rounded-pill mx-auto">
