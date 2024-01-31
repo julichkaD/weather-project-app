@@ -1,50 +1,54 @@
+
 .container-main {
   background-image: url("Lake-Wallpaper-Free-Download.jpg");
   background-size: cover;
-  width: 85%;
+  width: 100%;
   height: 80vh;
   display: block;
   margin: 0 auto;
   margin-top: 30px;
-  border-radius: 50px;
-}
-body {
-  background: linear-gradient(to bottom, #ebf1f6 0%, #abd3ee 50%, #d5ebfb 100%);
-  background-size: 100% 100%;
-}
-footer {
-  text-align: center;
-  background: linear-gradient(to bottom, #ebf1f6 0%, #abd3ee 50%, #d5ebfb 100%);
-  padding: 50px;
-  font-family: "Courier New", Courier, monospace;
+  border-radius: 20px;
 }
 
 .row-search {
   margin-left: 200px;
+  padding-top: 50px;
 }
 .container-weather {
+  padding-top: 20px;
   font-size: 28px;
   text-align: center;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 600;
   color: #301076;
 }
+.card {
+  padding: 10px;
+}
 
-
-#forecast {
-  margin-top: 170px;
+.forecast {
   display: flex;
-  justify-content: space-between;
-  margin-top: 150px;
-  padding-top: 10px;
+  justify-content:space-around;
+  padding: 80px 20px;
   color: #4111aa;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
   font-weight: 100;
   font-size: 20px;
   text-align: center;
-
 }
 .weather-forecast-icon {
   width: 70px;
   height: 70px;
 }
+footer {
+  text-align: center;
+  padding: 50px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  
+}
+footer a{
+   color: #6f2ff9;
+   text-decoration: none;
+}
+

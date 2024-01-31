@@ -96,11 +96,11 @@ function displayForecast(response) {
     if (index < 5) {
       forecastHtml =
         forecastHtml +
-        `<div class=" col-2 card rounded-pill mx-auto">
+        `<div class="col-1 card mx-auto rounded-5 bg-light fw-medium"">
         <div class="weather-forecast-date">${formattedForecast(day.time)}</div>
        <div><img src = "${
          day.condition.icon_url
-       }" class="weather-forecast-icon" /></div> 
+       }" class="weather-forecast-icon"  /></div> 
         <div class="weather-forecast-temperatures">
           <div class="weather-forecast-temperature">
             <strong>${Math.round(day.temperature.maximum)}º</strong>
