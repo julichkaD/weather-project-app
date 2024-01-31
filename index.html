@@ -19,12 +19,12 @@
 <body>
     <div class="container">
         <div class="container-main">
-            <div class="row-search py-3">
+            <div class="row-search">
                 <div class="col-9">
                     <form class="d-flex" id="search-form">
                         <input class="form-control" id="input-form" type="text" placeholder="Enter Your City"
                             autofocus="on" autocomplete="no" />
-                        <button type="submit" value="submit" class="btn btn-outline-primary btn-small ms-2">
+                        <button type="submit" value="submit" class="btn btn-outline-light btn-small ms-3">
                             Search
                         </button>
                     </form>
@@ -33,31 +33,30 @@
             <div class="container-weather my-3">
                 <div class="row">
                     <div class="col-6 text-warning" id="city">
-                        New York
+
                     </div>
-                    <div class="col-6 text-warning" id="current-date">November, 10</div>
-                    <div class="col-6" id="current-temp">20 ℃</div>
-                    <div class="col-6" id="current-day">Friday</div>
-                    <div class="col-6" id="description">sunny</div>
-                    <div class="col-6" id="wind-speed">Wind: 4 km/h</div>
+                    <div class="col-6 text-warning" id="current-date"></div>
+                    <div class="col-6" id="current-temp"><!--  --></div>
+                    <div class="col-6" id="current-day"></div>
+                    <div class="col-6" id="description"></div>
+                    <div class="col-6" id="wind-speed"></div>
                 </div>
                 <div class="row">
                     <div class="col-6" id="icon">
-                        <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" />
+                        <!-- <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" /> -->
                     </div>
-                    <div class="col-6" id="humidity">Humidity: 20%</div>
+                    <div class="col-6" id="humidity"></div>
                 </div>
             </div>
 
-            <div class="container" id="forecast">
+            <div class="forecast" id="forecast">
                 <div class="row"></div>
-
             </div>
 
         </div>
     </div>
 
-    <footer>This project was coded by
+    <footer>The project was coded by
         <a href="https://github.com/julichkaD" target="_blank">Julichka</a>,
         is
         <a href="https://github.com/julichkaD/weather-project-app" target="_blank">open-sourced on GitHub</a>
